@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 150px 150px 100px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+#header {
+    border-bottom: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d0b6e;
+    color: white;
+}
+
+#dos {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 4px solid black;
+    background-color: #441aff;
+    color: white;
+}
+
+#dos div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+#dos div:first-child {
+    border-right: 4px solid black;
+}
+
+#dos h2 {
+    margin: 0;
+}
+
+#tres {
+    border-bottom: 4px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    grid-row: 3;
+}
+
+#tres a {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9f9;
+}
+
+#cuatro {
+    border-bottom: 4px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    grid-row: 4;
+}
+
+#cuatro a {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9f9;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d0b6e;
+    color: white;
+}
+
+@media (max-width: 800px) {
+
+    .principal {
+        grid-template-rows: 100px 100px 300px 400px 100px;
+    }
+
+    #tres {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #cuatro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 400px) {
+
+    .principal {
+        grid-template-rows: 100px 200px 300px 400px 100px;
+    }
+
+    #dos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #tres {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #cuatro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
